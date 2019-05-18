@@ -1,0 +1,16 @@
+Команды для установки Wine:
+1. Если вы испльзуете 64-битную систему:
+sudo dpkg --add-architecture i386
+2. Добавления репозитория, скачивание и добавление открытого ключа:
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubu... xenial main'
+wget -nc https://dl.winehq.org/wine-builds/Rel...
+sudo apt-key add Release.key
+3. Обновление списка пакетов:
+sudo apt-get update
+4. Установка стабильной версии или версии для разработчиков:
+sudo apt-get install --install-recommends winehq-stable
+sudo apt-get install --install-recommends winehq-devel
+5. Запуск Windows-приложений через терминал Ubuntu:
+wine /пусть_до_файла
+пример:
+wine /home/ivan/.wine/drive_c/'Program Files (x86)'/'BurnAware Free'/BurnAware.exe
